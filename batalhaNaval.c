@@ -10,6 +10,41 @@ int main() {
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
 
+   char coluna [10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};  //Identificação das colunas
+    int linha [10][10] = { //Identificação das linhas com matriz bidimencional
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 3, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 3, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 3, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 3, 3, 3},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+    };
+
+     printf("\n   ===   BEM VINDO A BATALHA NAVAL   ===   \n");   
+    printf("\n");
+    printf("\n");
+    printf("   ===   TABULEIRO   ===   \n");   //Exibição do tabuleiro
+    printf("\n");
+    printf("     ");
+    for (int i = 0; i < 10; i++) {   
+        printf("%c ", coluna[i]);
+    }
+    printf("\n");
+    printf("    --------------------\n");
+    for (int c = 0; c < 10; c++) {   //Loop para gerar o tabuleiro
+        printf("%2d | ", c + 1);
+    
+        for (int l = 0; l < 10; l++) {
+            printf("%d ", linha[c][l]);
+            
+        }
+        printf("\n");
+    }
+
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
     // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
